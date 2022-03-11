@@ -4,7 +4,10 @@
   "description": "Aplicação Backend para gerenciar um restaurante, foi usado Typescript, NodeJs, Mongodb.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./dist && tsc -p .",
+    "dev": "ts-node-dev --transpile-only --respawn --inspect --project tsconfig.json ./src/app.ts",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
